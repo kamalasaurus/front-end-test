@@ -1,0 +1,14 @@
+<ul>
+  <% @judges.each do |judge| %>
+    <li>
+      <%= link_to "#{judge.full_name}", "/judge/#{judge.id}" %>
+    </li>
+  <% end %>
+</ul>
+
+<!-- DISREGARD THE TAGS BELOW HERE IF YOU'RE NOT USING JAVASCRIPT -->
+<%= javascript_include_tag 'judge' %>
+
+<%= javascript_tag do %>
+  window.index = new window.Index(<%=raw @judges.to_json%>)
+<% end %>

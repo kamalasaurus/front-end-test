@@ -1,0 +1,34 @@
+<div class="name">
+  <%= @judge.full_name %>
+</div>
+
+<div class="birthday">
+  <%= @judge.full_birthday %>
+</div>
+
+<div class="birthplace">
+  <%= @judge.full_birthplace %>
+</div>
+
+<div class="deathday">
+  <%= @judge.full_deathday %>
+</div>
+
+<div class="deathplace">
+  <%= @judge.full_deathplace %>
+</div>
+
+<div class="race">
+  <%= @judge.raced %>
+</div>
+
+<div class="gender">
+  <%= @judge.gendered %>
+</div>
+
+<!-- DISREGARD THE TAGS BELOW HERE IF YOU'RE NOT USING JAVASCRIPT -->
+<%= javascript_include_tag 'judge' %>
+
+<%= javascript_tag do %>
+  window.show = new window.Show(<%=raw @judge.to_json%>);
+<% end %>

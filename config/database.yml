@@ -1,0 +1,8 @@
+development:
+  host: 50.112.238.133
+  database: ravel
+  password: raveler
+  username: root
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
